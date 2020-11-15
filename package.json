@@ -16,7 +16,7 @@
     "test:coverage": "npx nyc npm run test:all",
     "test:integration": "mocha test/integration/**/*.spec.ts",
     "test:unit": "mocha test/unit/**/*.spec.ts",
-    "serverless:deploy": "./deploy.sh"
+    "serverless:deploy": "serverless deploy"
   },
   "pre-commit": [
     "lint",
