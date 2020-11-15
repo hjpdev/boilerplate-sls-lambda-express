@@ -10,7 +10,7 @@ describe('Acceptance Tests', () => {
         method: 'GET'
       })
 
-      expect(result).to.eql('Healthy')
+      expect(result.text()).to.eql('Healthy')
     })
   })
 })
