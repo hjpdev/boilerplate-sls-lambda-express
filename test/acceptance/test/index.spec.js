@@ -4,13 +4,11 @@ const { expect } = require('chai')
 const baseUrl = 'http://172.17.0.1:8088/healthcheck'
 
 describe('Acceptance Tests', () => {
-  describe('GET', () => {
-    it('Uploads Readings', async () => {
-      const result = await fetch(baseUrl, {
-        method: 'GET'
-      })
-
-      expect(result.text()).to.eql('Healthy')
+  it('Gets Readings', async () => {
+    const result = await fetch(baseUrl, {
+      method: 'GET'
     })
+
+    expect(result.status).to.eql(200)
   })
 })
