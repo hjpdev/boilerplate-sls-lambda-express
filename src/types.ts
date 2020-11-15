@@ -1,0 +1,3 @@
+interface HelloData {
+  date: Date
+}

@@ -1,0 +1,35 @@
+service: boilerplate-api
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: eu-west-1
+  memorySize: 128
+  timeout: 2
+
+functions:
+  server:
+    name: boilerplate-api-lambda
+    handler: ./dist/app.handler
+    memorySize: 128
+    timeout: 2
+    events:
+      - http: ANY /
+      - http: "ANY /{proxy+}"
+
+package:
+  include:
+    - node_modules/tslib
+  exclude:
+    - .*
+    - .github/**
+    - .vscode/**
+    - test/**
+    - server/**
+    - Dockerfile
+    - docker-compose.yaml
+    - package-lock.json

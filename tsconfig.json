@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "allowJs": true,
+    "target": "es5",
+    "esModuleInterop": true,
+    "importHelpers": true
+  },
+  "include": [
+    "src/**/*", "src/.index.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
