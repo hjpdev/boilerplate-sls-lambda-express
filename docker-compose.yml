@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    ports:
+      - 8088:8088
+    command: npm start
+
+  acceptance_test:
+    build: test/acceptance
+    working_dir: /usr/src/acceptance
