@@ -1,7 +1,7 @@
 import request from 'supertest'
 import { expect } from 'chai'
 
-import createServer from '../../server/app'
+import { createServer } from '../../src/app'
 
 describe('App', () => {
   const app = createServer()

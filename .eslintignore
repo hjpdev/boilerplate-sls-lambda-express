@@ -1,3 +1,4 @@
+.mocharc.js
 node_modules
 dist
 test/acceptance
