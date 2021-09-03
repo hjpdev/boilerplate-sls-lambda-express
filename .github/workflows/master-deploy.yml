@@ -35,6 +35,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-west-1
 
-    - name: Deploy
+    - name: Destroy
       if: ${{ success() }}
-      run: npm run serverless:deploy
+      run: npm run serverless:remove
