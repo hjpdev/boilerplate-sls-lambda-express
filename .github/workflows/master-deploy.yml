@@ -27,18 +27,6 @@ jobs:
     - name: Build
       run: npm run build --if-present
 
-    - name: Unit Tests
-      run: npm run test:unit
-      if: ${{ success() }}
-
-    - name: Integration Tests
-      run: npm run test:integration
-      if: ${{ success() }}
-
-    - name: Acceptance Tests
-      run: npm run test:acceptance
-      if: ${{ success() }}
-
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       if: ${{ success() }}
